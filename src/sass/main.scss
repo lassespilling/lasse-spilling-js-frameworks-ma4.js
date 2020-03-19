@@ -1,0 +1,77 @@
+$color--react: #61dafb;
+@import "./partials/recipes";
+@import "./partials/preloader";
+
+body {
+    background-color: beige !important;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    font-family: "karla", sans-serif;
+    padding: 15vmin;
+}
+
+#thebg {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1.4) translateY(20px);
+    &.loaded {
+        transform: scale(1.4) translateY(0);
+        opacity: 1;
+    }
+}
+.animate > :not(.loaded) {
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.loaded {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Typography */
+h1 {
+    font-family: "Gelion", sans-serif;
+}
+p {
+    max-width: 30rem;
+    margin: auto;
+    display: block;
+    background: rgba(0, 0, 0, 0);
+    border: 0px;
+    padding: 1rem;
+    border-radius: 0.3rem;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../assets/Karla-Bold.woff2") format("woff2"),
+        url("../assets/Karla-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../assets/Karla-Regular.woff2") format("woff2"),
+        url("../assets/Karla-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gelion";
+    src: url("../assets/Gelion-Bold.woff2") format("woff2"),
+        url("../assets/Gelion-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+}

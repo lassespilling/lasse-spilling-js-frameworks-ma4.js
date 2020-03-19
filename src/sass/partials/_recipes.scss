@@ -1,0 +1,17 @@
+.card {
+    margin-bottom: 30px;
+    background: rgb(255, 247, 210) !important;
+    border: 0 !important;
+    transition: box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    overflow: hidden;
+    &-img-container {
+        overflow: hidden;
+    }
+    &-img-top {
+        filter: blur(2px);
+        transform: scale(1.1);
+    }
+    &:hover {
+        filter: brightness(80%);
+    }
+}
